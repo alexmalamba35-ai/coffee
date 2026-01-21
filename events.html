@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events and Workshops</title>
+  <link rel="stylesheet" href="events.css" />
+</head>
+  <header>
+    <nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/12.jfif" alt="Bean Boutique Logo" />
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="coffee selection.html">Coffee Selection</a></li>
+    <li><a href="shopping cart.html">Shopping Cart</a></li>
+    <li><a href="Brewing Equipment.html">Brewing Equipment</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="events.html"class="active" >Events</a></li>
+    <li><a href="special.html">Special Offers</a></li>
+  </ul>
+</nav>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Events and Workshops</h1>
+      <p class="subtitle">Join our upcoming sessions—learn, connect, and grow.</p>
+    </div>
+  <main>
+    <section class="events-list container" aria-labelledby="upcoming-events-title">
+      <h2 id="upcoming-events-title">Upcoming events</h2>
+
+      <!-- Example event cards (static placeholders) -->
+      <div class="events-grid">
+        <article class="event-card">
+          <h3>Intro to Front-End Basics</h3>
+          <p><strong>Date:</strong> 28 Jan 2026 • <strong>Time:</strong> 14:00–16:00</p>
+          <p class="event-desc">
+            A hands-on session covering HTML, CSS, and accessibility fundamentals.
+          </p>
+        </article>
+
+        <article class="event-card">
+          <h3>Responsive Design Workshop</h3>
+          <p><strong>Date:</strong> 31 Jan 2026 • <strong>Time:</strong> 10:00–12:30</p>
+          <p class="event-desc">
+            Learn modern layout techniques with Flexbox and Grid, plus mobile-first strategies.
+          </p>
+        </article>
+
+        <article class="event-card">
+          <h3>UI Patterns & Forms</h3>
+          <p><strong>Date:</strong> 05 Feb 2026 • <strong>Time:</strong> 09:30–11:30</p>
+          <p class="event-desc">
+            Design accessible, user-friendly forms and micro-interactions that delight users.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="registration container" aria-labelledby="registration-title">
+      <h2 id="registration-title">Register online</h2>
+      <p class="helper-text">
+        Fill in your details to sign up. Submitting will open your email client with the form data.
+      </p>
+
+      <!-- Note: mailto submits via the user's email client -->
+      <form
+        class="register-form"
+        action="mailto:events@example.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div class="form-row">
+          <div class="form-field">
+            <label for="firstName">First name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="First Name"
+              placeholder="e.g., Alex"
+              autocomplete="given-name"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="lastName">Last name</label>
+            <input
+              type="text"
+              id="lastName"
+              name="Last Name"
+              placeholder="e.g., Banda"
+              autocomplete="family-name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field full">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="Email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="btn primary">Submit registration</button>
+
+        <p class="note">
+          Tip: If nothing happens on submit, ensure you have a default email app configured.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Events & Workshops</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e6d3c5; /* soft beige background */
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray; /* navbar stays gray */
+  padding: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  border-radius: 50%; /* round logo */
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #fff;
+}
+
+
+
+/* Base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  background: #e6d3c5; /* Beige background */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+.container {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+  padding: 1.25rem;
+}
+
+/* Header */
+.site-header {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.subtitle {
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Offers Section */
+.offers h2,
+.subscriptions h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  margin: 0 0 1rem;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.offer-card {
+  grid-column: span 12;
+  background: #ffffff; /* White box */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.offer-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 640px) {
+  .offer-card { grid-column: span 6; }
+}
+@media (min-width: 960px) {
+  .offer-card { grid-column: span 4; }
+}
+
+/* Subscription Section */
+.subs-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.subs-card {
+  grid-column: span 12;
+  background: #ffffff; /* White box */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.subs-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.subs-card ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.subs-card ul li {
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+@media (min-width: 640px) {
+  .subs-card { grid-column: span 6; }
+}
+@media (min-width: 960px) {
+  .subs-card { grid-column: span 4; }
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid #777;
+  text-align: center;
+  background: #9ca3af; /* Grey footer */
+  color: #fff;
+}

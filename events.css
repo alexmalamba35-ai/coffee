@@ -1,0 +1,261 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e6d3c5; /* soft beige background */
+  color: #333;               /* text color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray; /* navbar stays gray */
+  padding: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;        /* adjust size */
+  width: auto;
+  border-radius: 50%;  /* makes logo round */
+  object-fit: cover;
+}
+
+
+/* Base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  background: #e6d3c5; /* Updated background */
+  color: #333; /* Dark text for contrast */
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+.container {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+  padding: 1.25rem;
+}
+
+/* Header */
+.site-header {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Events grid */
+.events-list {
+  margin-top: 1rem;
+}
+
+.events-list h2,
+.registration h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  margin: 0 0 1rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.event-card {
+  grid-column: span 12;
+  background: #ffffff; /* White boxes */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.event-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.event-desc {
+  margin: 0.5rem 0 0;
+  color: #555;
+}
+
+/* Responsive columns for events */
+@media (min-width: 640px) {
+  .event-card { grid-column: span 6; }
+}
+@media (min-width: 960px) {
+  .event-card { grid-column: span 4; }
+}
+
+/* Registration section */
+.registration {
+  margin-top: 2rem;
+}
+
+.helper-text {
+  color: #555;
+  margin: 0 0 1rem;
+}
+
+/* Form */
+.register-form {
+  background: #ffffff; /* White form box */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.form-field {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .form-field { grid-column: span 6; }
+  .form-field.full { grid-column: span 12; }
+}
+
+label {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  appearance: none;
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 120ms ease;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96,165,250,0.25);
+  transform: translateY(-1px);
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 120ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, #22c55e, #15803d);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(34,197,94,0.25);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(34,197,94,0.35);
+}
+
+.btn.primary:active {
+  transform: translateY(0);
+}
+
+/* Note text */
+.note {
+  margin-top: 0.75rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid #777;
+  text-align: center;
+  background: #9ca3af; /* Grey footer */
+  color: #fff;
+}
